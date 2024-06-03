@@ -24,8 +24,6 @@ proc test(num: int) =
   except Exception as e:
     echo fmt"Error saving string to file: {e.msg}"
 
-  echo "Nim finished."
-
 when isMainModule:
   if paramCount() != 1:
     echo "Usage: ", getAppFilename(), " <num>"
