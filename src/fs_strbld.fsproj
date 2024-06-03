@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <Optimize>true</Optimize>
+	<EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+	<SatelliteResourceLanguages>en</SatelliteResourceLanguages>
+  </PropertyGroup>
+
+  
+  <ItemGroup>
+    <Compile Include="fs_strbld.fs" />
+  </ItemGroup>
+
+</Project>
