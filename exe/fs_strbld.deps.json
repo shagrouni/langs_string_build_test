@@ -1,0 +1,41 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "fs_strbld/1.0.0": {
+        "dependencies": {
+          "FSharp.Core": "8.0.100"
+        },
+        "runtime": {
+          "fs_strbld.dll": {}
+        }
+      },
+      "FSharp.Core/8.0.100": {
+        "runtime": {
+          "lib/netstandard2.1/FSharp.Core.dll": {
+            "assemblyVersion": "8.0.0.0",
+            "fileVersion": "8.1.23.52306"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "fs_strbld/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "FSharp.Core/8.0.100": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ZOVZ/o+jI3ormTZOa28Wh0tSRoyle1f7lKFcUN61sPiXI7eDZu8eSveFybgTeyIEyW0ujjp31cp7GOglDgsNEg==",
+      "path": "fsharp.core/8.0.100",
+      "hashPath": "fsharp.core.8.0.100.nupkg.sha512"
+    }
+  }
+}
