@@ -22,11 +22,9 @@ def test(num : Int64)
     
     puts "  #{mins}:#{secs}:#{millis} Itr #{num} Len #{str.bytesize} "
      
-    #puts "  #{minutes}:#{seconds}:#{milliseconds} Itr #{num} Len #{str.bytesize} "
-    
+ 
     File.write("out/crystal_output.txt", str.to_s) rescue puts "Error saving string to file."
-    # File.write("out/crystal_output.txt", str.to_s) rescue puts "Error saving string to file: #{$!}"
-    #File.write("out/crystal_output.txt", str.to_s)
+
   end
 end
 
