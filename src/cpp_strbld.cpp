@@ -37,7 +37,7 @@ void test(int64_t num) {
     auto len = s.length();
 
     std::string s_time = format_time(elapsed);
-    std::cout << "  " << s_time << " itr " << cnt << " len " << len << std::endl;
+    std::cout << "  " << s_time << " iter " << cnt << " len " << len << std::endl;
 
     std::string file_path = "out/cpp_output.txt";
     std::ofstream file(file_path);

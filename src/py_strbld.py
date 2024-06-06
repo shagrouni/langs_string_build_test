@@ -16,7 +16,7 @@ def test(num):
     seconds = elapsed_time.seconds % 60
     milliseconds = elapsed_time.microseconds // 10000
 
-    print(f"  {minutes}:{seconds}:{milliseconds} Itr {i} Len {len(s.getvalue())} ")
+    print(f"  {minutes}:{seconds}:{milliseconds} Iter {i} Len {len(s.getvalue())} ")
     
     file_path = "out/python_output.txt"
     

@@ -22,7 +22,7 @@ void test(long num) {
     auto seconds = elapsed.total!"seconds" % 60;
     auto milliseconds = elapsed.total!"msecs" % 1000;
 
-    writefln("  %2d:%2d:%3d Itr %d  Len %d  ", minutes, seconds, milliseconds, num, len);
+    writefln("  %2d:%2d:%3d Iter %d  Len %d  ", minutes, seconds, milliseconds, num, len);
 
     string filePath = "out/d_output.txt";
     try {

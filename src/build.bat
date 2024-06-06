@@ -25,8 +25,6 @@ g++ cpp_strbld.cpp -o ..\exe\cpp_strbld.exe
 rem g++ -o3 -march=native -mtune=native -ffast-math -funroll-loops -flto cpp_strbld.cpp -o cpp_strbld.exe
 
 @echo compiling OCaml ...
-rem ocamlc -o ..\exe\oc_strbld.exe oc_strbld.ml
-rem ocamlc -no-keep-docs -no-keep-locs -no-keep-locs -o ..\exe\oc_strbld.exe oc_strbld.ml
 ocamlc -I +unix unix.cma -o ..\exe\oc_strbld.exe oc_strbld.ml
 del oc_strbld.obj oc_strbld.cmi oc_strbld.cmx oc_strbld.cmo
 

@@ -12,7 +12,7 @@ test: function [num [integer!]] [
    
 	elapsed-time: now/time/precise - start-time
 
-	print ["  " elapsed-time "itr" num "len" length? s]
+	print ["  " elapsed-time "iter" num "len" length? s]
 
     result: try [write %out/red_output.txt s]
     either error? result [

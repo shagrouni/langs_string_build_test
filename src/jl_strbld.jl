@@ -13,7 +13,7 @@ function test(num::Int64)
     secs = floor(elapsed_time % 60)
     millis = floor((elapsed_time * 1000) % 1000)
 
-    println("  $mins:$secs:$millis Itr $num Len $(sizeof(s)) ")
+    println("  $mins:$secs:$millis Iter $num Len $(sizeof(s)) ")
     try
         open("out/julia_output.txt", "w") do f
             write(f, s)

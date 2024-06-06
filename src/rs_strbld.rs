@@ -9,7 +9,6 @@ fn format_time(time_ms: u128) -> String {
   let seconds = (time_ms / 1000) % 60;
   let minutes = (time_ms / 1000) / 60;
   
-  
   format!("{:02}:{:02}:{02}", minutes, seconds, milliseconds)
 }
 
@@ -24,21 +23,19 @@ pub fn test(num: i64) {
     for _ in 1..=num {
         i += 1;
         s.push_str(&format!(" R {}", i)); 
-
      }
 
     let elapsed = now.elapsed(); 
     let len = s.len();
 
     let s_time = format_time(elapsed.as_millis());
-    println!("  {} itr {} len {}", s_time, i, len);
+    println!("  {} iter {} len {}", s_time, i, len);
 
     let file_path = "out/rust_output.txt";
     match fs::write(file_path, s) {
         Ok(_) => (),
         Err(e) => eprintln!("Error saving string to file: {}", e),
     } 
-
 }
 
   fn main () {

@@ -15,7 +15,6 @@ fn test(num int) {
         sb.write_string(' V $i')
     }   
     elapsed := time.now() - start
-
     	
 	minutes := int(elapsed.minutes())
 	seconds := int(elapsed.seconds()) % 60
@@ -30,8 +29,7 @@ fn test(num int) {
         eprintln('Failed to write to the file')
         return
     }    
-    
-}
+ }
 
 fn main() {
     num := os.args[1].int()

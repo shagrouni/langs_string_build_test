@@ -20,7 +20,7 @@ def test(num : Int64)
     secs = elapsed_time.total_seconds.floor % 60
     millis = elapsed_time.total_milliseconds % 1000
     
-    puts "  #{mins}:#{secs}:#{millis} Itr #{num} Len #{str.bytesize} "
+    puts "  #{mins}:#{secs}:#{millis} Iter #{num} Len #{str.bytesize} "
      
  
     File.write("out/crystal_output.txt", str.to_s) rescue puts "Error saving string to file."

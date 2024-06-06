@@ -26,7 +26,7 @@ func test(num int64) {
 	seconds := int(elapsed.Seconds()) % 60
 	milliseconds := elapsed.Milliseconds() % 1000
 
-	fmt.Printf("  %2d:%2d:%3d Itr %d  Len %d  \n", minutes, seconds, milliseconds, num, len)
+	fmt.Printf("  %2d:%2d:%3d Iter %d  Len %d  \n", minutes, seconds, milliseconds, num, len)
 
 	filePath := "out/go_output.txt"
 	err := os.WriteFile(filePath, []byte(sb.String()), 0644)

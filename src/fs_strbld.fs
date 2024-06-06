@@ -4,7 +4,7 @@ open System
 open System.Text
 
 let test (num: int64) =
-    printf "  FS#"
+    printf "  F#"
     let mutable s = new StringBuilder("")
     let mutable i = 0L
     let startTime = DateTime.Now

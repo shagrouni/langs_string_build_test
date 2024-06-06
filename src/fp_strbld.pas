@@ -33,7 +33,7 @@ begin
     finish := Now;
     elapsed := finish - start;
     len := sb.Length;
-    WriteLn('  ', FormatDateTime('nn:ss:zzz', elapsed), '  Itr ', num, ' Len= ', len );
+    WriteLn('  ', FormatDateTime('nn:ss:zzz', elapsed), '  Iter ', num, ' Len= ', len );
     AssignFile(f, file_path);
     Rewrite(f);
     
