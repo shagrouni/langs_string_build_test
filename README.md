@@ -1,4 +1,4 @@
-Evaluating Language Performance when Handling Extensive String Constructions
+Evaluating Language Performance when Handling Large String
 ================================================================================
 
 To investigate how different programming languages handle building large strings, I created nearly identical programs for each language. Each program constructs a string through a series of iterations, with each iteration appending a character representing the iteration number. The entire text is then saved to a file in one go.
