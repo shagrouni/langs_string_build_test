@@ -15,9 +15,9 @@ def test(num : Int64)
 
   elapsed_time = Time.monotonic - start_time
 
-  mins = elapsed_time.total_minutes.to_i
-  secs = elapsed_time.total_seconds.to_i % 60
-  millis = elapsed_time.total_milliseconds % 1000
+  mins = elapsed_time.minutes
+  secs = elapsed_time.seconds
+  millis = elapsed_time.milliseconds
 
   puts "  #{mins}:#{secs}:#{millis} Iter #{num} Len #{s.bytesize} "
 
