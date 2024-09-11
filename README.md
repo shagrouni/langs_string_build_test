@@ -45,6 +45,10 @@ All tests are conducted on a computer with the following specifications:
 *   Memory: 16.0 GB
 *   OS: Windows 11 Pro
 
+Edit:
+-----
+Other Rust version added.
+
 Results
 -------
 
@@ -54,6 +58,7 @@ The results are organized by iteration count and text size, with language perfor
 
 | Language | Time |
 | --- | --- |
+| Rust 2 | 00:00:814 |
 | Java | 00:00:870 |
 | C++ | 00:01:38 |
 | C# | 00:01:45 |
@@ -76,6 +81,7 @@ The results are organized by iteration count and text size, with language perfor
 
 | Language | Time | Notes |
 | --- | --- | --- |
+| Rust 2 | 00:01:625 |
 | Java | 00:01:77 | Failed to save |
 | C# | 00:02:89 | Failed to save |
 | C++ | 00:02:95 |  |
@@ -98,6 +104,7 @@ The results are organized by iteration count and text size, with language perfor
 
 | Language | Time | Notes |
 | --- | --- | --- |
+| Rust 2 | 00:03:289 |
 | Nim | 00:08:37 | Failed to save |
 | C | 00:09:92 |  |
 | C++ | 00:13:00 |  |
@@ -118,6 +125,7 @@ The results are organized by iteration count and text size, with language perfor
 
 | Language | Time | Notes |
 | --- | --- | --- |
+| Rust 2 | 0:08:131 |
 | C | 00:21:21 | Failed to save |
 | Nim | 00:21:22 | Failed to save |
 | C++ | 00:37:538 |  |
@@ -133,6 +141,7 @@ The results are organized by iteration count and text size, with language perfor
 
 | Language | Time | Notes |
 | --- | --- | --- |
+| Rust 2 | 00:27:184 |
 | C | 00:45:45 | Failed to save |
 | C++ | 01:07:46 |  |
 | Nim | 01:15:164 | Failed to save |
@@ -148,6 +157,7 @@ The results are organized by iteration count and text size, with language perfor
 
 | Language | Time | Notes |
 | --- | --- | --- |
+| Rust 2 | 01:58:878 |
 | C | 02:14:134 | Failed to save |
 | Nim | 02:29:30 | Failed to save |
 | C++ | 02:44:174 |  |
@@ -165,6 +175,7 @@ The results are organized by iteration count and text size, with language perfor
 | Nim | 04:44:49 | Failed to save |
 | Rust | 06:36:783 |  |
 | Julia | 10:14:19 |  |
+| &nbsp;&nbsp;&nbsp; Rust 2 |  | Failed |
 | &nbsp;&nbsp;&nbsp; Go |  | Failed |
 | &nbsp;&nbsp;&nbsp; Python |  | Failed |
 
@@ -172,8 +183,8 @@ The results are organized by iteration count and text size, with language perfor
 
 | Language | Time | Notes |
 | --- | --- | --- |
-| Nim | 05:19:25 | Failed to save |
-| Rust | 08:16:706 |  |
+| Nim | 04:46:262 | Failed to save |
+| Rust | 05:43:472 |  |
 | &nbsp;&nbsp;&nbsp; C++ |  | Failed |
 | &nbsp;&nbsp;&nbsp; C |  | Failed |
 | &nbsp;&nbsp;&nbsp; Julia |  | Failed |
