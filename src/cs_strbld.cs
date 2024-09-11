@@ -2,6 +2,7 @@
 using System;
 using System.IO;
 using System.Text;
+using System.Diagnostics;
 
 namespace FSharpToCSharp
 {
@@ -10,44 +11,41 @@ namespace FSharpToCSharp
         static void Test(long num)
         {
             Console.Write($"  C#");
-            StringBuilder s = new StringBuilder("");
+            StringWriter s = new StringWriter();
             long i = 1L;
-            DateTime startTime = DateTime.Now;
+            var stopWatch = new Stopwatch();
 
+            stopWatch.Start();
             for ( i = 1L; i <= num; i++)
             {
-                s.Append(" C " + i.ToString());
+                s.Write(" C {0}", i);
             }
-            
-            TimeSpan elapsedTime = DateTime.Now - startTime;
-            int minutes = elapsedTime.Minutes;
-            int seconds = elapsedTime.Seconds;
-            int milliseconds = elapsedTime.Milliseconds;
+            stopWatch.Stop();
 
-            int length = s.Length;
-            Console.WriteLine($"  {minutes}:{seconds}:{milliseconds} Iter {num}: Len {length}");
+            TimeSpan elapsedTime = stopWatch.Elapsed;
+            int length = s.GetStringBuilder().Length;
+            Console.WriteLine($"  {elapsedTime:mm':'ss':'fffff} Iter {num}: Len {length}");
             
-            
-            string filePath = "out/c#_output.txt";
+            // string filePath = "out/c#_output.txt";
 
-            try
-            {
-                using (StreamWriter file = new StreamWriter(filePath))
-                {
-                    file.Write(s.ToString());
-                }
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"Error saving string to file: {ex.Message}");
-            }
+            // try
+            // {
+            //     using (StreamWriter file = new StreamWriter(filePath))
+            //     {
+            //         file.Write(s.ToString());
+            //     }
+            // }
+            // catch (Exception ex)
+            // {
+            //     Console.WriteLine($"Error saving string to file: {ex.Message}");
+            // }
         }
 
         static int Main(string[] args)
         {
             if (args.Length > 0 && long.TryParse(args[0], out long num))
             {
-                    Test(num);
+                Test(num);
                 return 0;
             }
             else
