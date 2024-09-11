@@ -161,8 +161,8 @@ The results are organized by iteration count and text size, with language perfor
 | C | 02:14:134 | Failed to save |
 | Nim | 02:29:30 | Failed to save |
 | C++ | 02:44:174 |  |
+| Rust | 04:04:59 |  |
 | Python | 04:23:69 | Failed to save |
-| Rust | 04:47:59 |  |
 | Julia | 06:43:273 |  |
 | Go | 13:25:161 |  |
 
@@ -173,7 +173,7 @@ The results are organized by iteration count and text size, with language perfor
 | C | 02:30:15 | Failed to save |
 | C++ | 03:16:36 |  |
 | Nim | 04:44:49 | Failed to save |
-| Rust | 06:36:783 |  |
+| Rust | 04:53:977 |  |
 | Julia | 10:14:19 |  |
 | &nbsp;&nbsp;&nbsp; Rust 2 |  | Failed |
 | &nbsp;&nbsp;&nbsp; Go |  | Failed |
