@@ -1,3 +1,4 @@
+//javac -d ..\exe jv_strbld.java
 import java.io.FileWriter;
 import java.io.IOException;
 import java.time.Duration;
@@ -25,7 +26,8 @@ public class jv_strbld {
         String filePath = "out/java_output.txt";
 
         try (FileWriter file = new FileWriter(filePath)) {
-            file.write(s.toString());
+            //file.write(s.toString());
+            file.append(s);
         } catch (IOException ex) {
             System.out.printf("Error saving string to file: %s%n", ex.getMessage());
         }

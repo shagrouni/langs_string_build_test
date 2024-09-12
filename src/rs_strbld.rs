@@ -3,6 +3,7 @@ use std::fs;
 use std::time::Instant;
 use std::env;
 use std::io::{self, Write};
+use std::fmt::Write as _;
 
 fn format_time(time_ms: u128) -> String {
   let milliseconds = time_ms % 1000;
@@ -22,7 +23,10 @@ pub fn test(num: i64) {
      
     for _ in 1..=num {
         i += 1;
-        s.push_str(&format!(" R {}", i)); 
+        //s.push_str(&format!(" R {}", i)); 
+        s.push_str(" R "); 
+        write!(s, "{}", i).unwrap();
+
      }
 
     let elapsed = now.elapsed(); 
