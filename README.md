@@ -1,4 +1,4 @@
-Evaluating Language Performance when Handling Large String
+Evaluating Language Performance when Handling Extensive String Constructions
 ================================================================================
 
 To investigate how different programming languages handle building large strings, I created nearly identical programs for each language. Each program constructs a string through a series of iterations, with each iteration appending a character representing the iteration number. The entire text is then saved to a file in one go.
@@ -35,6 +35,7 @@ Languages Tested
 *   Python, 3.12.3
 *   Dart, SDK 3.1.0
 *   Java, OPENJDK VERSION "11.0.16.1"
+*   Perl 5, version 40, subversion 0 (v5.40.0)
 
 Test Environment
 -----------------
@@ -46,8 +47,12 @@ All tests are conducted on a computer with the following specifications:
 *   OS: Windows 11 Pro
 
 Edit:
------
 Other Rust version added.
+
+Edit2:
+* Perl added
+* Removed the first Rust version and corrected the results for Rust and C++
+
 
 Results
 -------
@@ -58,12 +63,13 @@ The results are organized by iteration count and text size, with language perfor
 
 | Language | Time |
 | --- | --- |
-| Rust 2 | 00:00:814 |
+| Rust | 00:00:814 |
 | Java | 00:00:870 |
-| C++ | 00:01:38 |
 | C# | 00:01:45 |
 | F# | 00:01:51 |
 | Nim | 00:01:99 |
+| Perl | 00:02:14 |
+| C++ | 00:02:10 |
 | C | 00:02:20 |
 | Crystal | 00:02:80 |
 | Go | 00:03:70 |
@@ -74,25 +80,25 @@ The results are organized by iteration count and text size, with language perfor
 | Dart | 00:06:10 |
 | V | 00:06:20 |
 | Julia | 00:07:89 |
-| OCaml | 00:08:85 |
-| RED | 00:17:30 |
+| OCaml | 00:08:33 |
+| RED | 00:16:93 |
 
 ### 100,000,000 iterations, 1.01 GB text size
 
 | Language | Time | Notes |
 | --- | --- | --- |
-| Rust 2 | 00:01:625 |
+| Rust | 00:01:625 |
 | Java | 00:01:77 | Failed to save |
 | C# | 00:02:89 | Failed to save |
-| C++ | 00:02:95 |  |
 | Nim | 00:03:89 |  |
+| C++ | 00:04:14 |  |
 | C | 00:04:41 |  |
+| Perl | 00:04:497 |
 | Crystal | 00:05:90 |  |
 | Go | 00:07:51 |  |
 | D | 00:08:34 |  |
 | Python | 00:08:62 |  |
 | Free Pascal | 00:09:08 |  |
-| Rust | 00:09:90 |  |
 | V | 00:13:30 |  |
 | Dart | 00:13:68 |  |
 | Julia | 00:15:47 |  |
@@ -104,12 +110,12 @@ The results are organized by iteration count and text size, with language perfor
 
 | Language | Time | Notes |
 | --- | --- | --- |
-| Rust 2 | 00:03:289 |
+| Rust | 00:03:289 |
+| C++ | 00:08:318 | Failed to save |
 | Nim | 00:08:37 | Failed to save |
+| Perl | 00:09:105 |
 | C | 00:09:92 |  |
-| C++ | 00:13:00 |  |
 | Python | 00:19:27 |  |
-| Rust | 00:20:28 |  |
 | D | 00:22:28 |  |
 | Go | 00:25:51 |  |
 | Julia | 00:31:27 |  |
@@ -125,12 +131,12 @@ The results are organized by iteration count and text size, with language perfor
 
 | Language | Time | Notes |
 | --- | --- | --- |
-| Rust 2 | 0:08:131 |
-| C | 00:21:21 | Failed to save |
-| Nim | 00:21:22 | Failed to save |
-| C++ | 00:37:538 |  |
+| Rust | 0:08:131 |
+| C++ | 00:20:338 | Failed to save |
+| C | 00:19:198 | Failed to save |
+| Nim | 00:20:57 | Failed to save |
+| Perl | 00:23:482 |
 | Python | 00:42:80 |  |
-| Rust | 00:51:759 |  |
 | D | 01:05:4 |  |
 | Go | 01:07:53 |  |
 | Julia | 01:16:79 |  |
@@ -141,12 +147,12 @@ The results are organized by iteration count and text size, with language perfor
 
 | Language | Time | Notes |
 | --- | --- | --- |
-| Rust 2 | 00:27:184 |
-| C | 00:45:45 | Failed to save |
-| C++ | 01:07:46 |  |
+| Rust | 00:27:184 |
+| C | 00:41:41 | Failed to save |
+| C++ | 00:51:93 | Failed to save |
 | Nim | 01:15:164 | Failed to save |
 | Python | 01:41:46 |  |
-| Rust | 02:01:3 |  |
+| Perl | 01:29:107 |
 | Julia | 02:58:553 |  |
 | Go | 05:24:528 |  |
 | &nbsp;&nbsp;&nbsp; D |  | Failed |
@@ -157,11 +163,11 @@ The results are organized by iteration count and text size, with language perfor
 
 | Language | Time | Notes |
 | --- | --- | --- |
-| Rust 2 | 01:58:878 |
+| Rust | 01:58:878 |
 | C | 02:14:134 | Failed to save |
+| C++ | 02:26:846 | Failed to save |
 | Nim | 02:29:30 | Failed to save |
-| C++ | 02:44:174 |  |
-| Rust | 04:04:59 |  |
+| Perl | 03:46:818 |  |
 | Python | 04:23:69 | Failed to save |
 | Julia | 06:43:273 |  |
 | Go | 13:25:161 |  |
@@ -170,12 +176,12 @@ The results are organized by iteration count and text size, with language perfor
 
 | Language | Time | Notes |
 | --- | --- | --- |
+| Rust | 02:18:98 |
 | C | 02:30:15 | Failed to save |
-| C++ | 03:16:36 |  |
+| C++ | 02:41:351 | Failed to save |
 | Nim | 04:44:49 | Failed to save |
-| Rust | 04:53:977 |  |
+| Perl | 09:34:90 |  |
 | Julia | 10:14:19 |  |
-| &nbsp;&nbsp;&nbsp; Rust 2 |  | Failed |
 | &nbsp;&nbsp;&nbsp; Go |  | Failed |
 | &nbsp;&nbsp;&nbsp; Python |  | Failed |
 
@@ -183,15 +189,17 @@ The results are organized by iteration count and text size, with language perfor
 
 | Language | Time | Notes |
 | --- | --- | --- |
+| Rust | 02:22:671 |
+| C++ | 03:07:973 | Failed to save |
 | Nim | 04:46:262 | Failed to save |
-| Rust | 05:43:472 |  |
-| &nbsp;&nbsp;&nbsp; C++ |  | Failed |
 | &nbsp;&nbsp;&nbsp; C |  | Failed |
 | &nbsp;&nbsp;&nbsp; Julia |  | Failed |
+| &nbsp;&nbsp;&nbsp; Perl |  | Failed |
 
 ### 3000,000,000 iterations
 
 | Language | Notes |
 | --- | --- |
-| &nbsp;&nbsp;&nbsp; Nim | Failed |
 | &nbsp;&nbsp;&nbsp; Rust | Failed |
+| &nbsp;&nbsp;&nbsp; C++ | Failed |
+| &nbsp;&nbsp;&nbsp; Nim | Failed |
