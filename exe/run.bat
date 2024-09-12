@@ -14,6 +14,8 @@ fp_strbld %num%
 cr_strbld %num%
 cs_strbld.exe  %num%
 fs_strbld.exe  %num%
+dr_strbld %num%
 red_strbld %num%
 v_strbld %num%
-
+java jv_strbld %num%
+perl pl_strbld.pl %num%
