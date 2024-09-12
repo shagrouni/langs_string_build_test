@@ -3,29 +3,25 @@
 require "time"
 
 def test(num : Int64)
-  
   print "  Crystal"
-    
-    start_time = Time.monotonic
 
-    s = String.build do |str|
-    
+  start_time = Time.monotonic
+
+  s = String.build do |io|
     (1..num).each do |i|
-      str << " C #{i}"
+      io << " C #{i}"
     end
-
-    elapsed_time = Time.monotonic - start_time
-    
-    mins = elapsed_time.total_minutes.floor
-    secs = elapsed_time.total_seconds.floor % 60
-    millis = elapsed_time.total_milliseconds % 1000
-    
-    puts "  #{mins}:#{secs}:#{millis} Iter #{num} Len #{str.bytesize} "
-     
- 
-    File.write("out/crystal_output.txt", str.to_s) rescue puts "Error saving string to file."
-
   end
+
+  elapsed_time = Time.monotonic - start_time
+
+  mins = elapsed_time.minutes
+  secs = elapsed_time.seconds
+  millis = elapsed_time.milliseconds
+
+  puts "  #{mins}:#{secs}:#{millis} Iter #{num} Len #{s.bytesize} "
+
+  File.write("out/crystal_output.txt", s.to_s) rescue puts "Error saving string to file."
 end
 
 num = ARGV[0].to_i
