@@ -76,7 +76,6 @@ The results are organized by iteration count and text size, with language perfor
 | D | 00:04:13 |
 | Python | 00:04:16 |
 | Free Pascal | 00:04:52 |
-| Rust | 00:04:93 |
 | Dart | 00:06:10 |
 | V | 00:06:20 |
 | Julia | 00:07:89 |
