@@ -53,6 +53,8 @@ Edit2:
 * Perl added
 * Removed the first Rust version and corrected the results for Rust and C++
 
+Edit3: 
+Ninor but effective changes to Crystal code and its results. Thanks to zw963 Billy.Zheng (https://github.com/zw963/langs_string_build_test/blob/main/src/cr_strbld.cr)
 
 Results
 -------
@@ -64,6 +66,7 @@ The results are organized by iteration count and text size, with language perfor
 | Language | Time |
 | --- | --- |
 | Rust | 00:00:814 |
+| Crystal | 00:00:823 |
 | Java | 00:00:870 |
 | C# | 00:01:45 |
 | F# | 00:01:51 |
@@ -71,7 +74,6 @@ The results are organized by iteration count and text size, with language perfor
 | Perl | 00:02:14 |
 | C++ | 00:02:10 |
 | C | 00:02:20 |
-| Crystal | 00:02:80 |
 | Go | 00:03:70 |
 | D | 00:04:13 |
 | Python | 00:04:16 |
@@ -87,13 +89,13 @@ The results are organized by iteration count and text size, with language perfor
 | Language | Time | Notes |
 | --- | --- | --- |
 | Rust | 00:01:625 |
-| Java | 00:01:77 | Failed to save |
+| Crystal | 00:01:662 |
+| Java | 00:01:770 | Failed to save |
 | C# | 00:02:89 | Failed to save |
 | Nim | 00:03:89 |  |
 | C++ | 00:04:14 |  |
 | C | 00:04:41 |  |
 | Perl | 00:04:497 |
-| Crystal | 00:05:90 |  |
 | Go | 00:07:51 |  |
 | D | 00:08:34 |  |
 | Python | 00:08:62 |  |
