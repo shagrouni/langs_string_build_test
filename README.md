@@ -54,7 +54,7 @@ Edit2:
 * Removed the first Rust version and corrected the results for Rust and C++
 
 Edit3: 
-Ninor but effective changes to Crystal code and its results. Thanks to zw963 Billy.Zheng (https://github.com/zw963/langs_string_build_test/blob/main/src/cr_strbld.cr)
+Minor but effective changes to Crystal code and its results. Thanks to zw963 Billy.Zheng (https://github.com/zw963/langs_string_build_test/blob/main/src/cr_strbld.cr)
 
 Results
 -------
